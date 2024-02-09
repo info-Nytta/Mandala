@@ -1,37 +1,19 @@
-<?php
-$dir="./front/img/mandala/";
-$fajlok=scandir($dir);
-$jeloles=false;
-
-/* ez így nem működőképes!
-
-if (!isset($_COOKIE["kedvencek"])){
-	$_COOKIE['kedvencek']=array();
-}
-
-if (isset($_GET["kedvenc"])) {
-	array_push($_COOKIE["kedvencek"],$_GET["kedvenc"]);
-}
-*/
-
-if (isset($_GET["kedvenc"])) {
-	uj_kedvenc($_GET["kedvenc"]);
-	$jeloles=true;
-}
-//$kedvencek=kedvencek();
-
-echo "<pre>";
-//print_r($GLOBALS);
-//print_r(kedvencek());
-echo "</pre>";
-?>
-
 <h1>Galéria</h1>
 
 <?php 
-	if (!$jeloles) include_once("kepek.php");
-	else include("hozzaad.php"); 
+if (isset($_GET["kedvenc"])) {
+    uj_kedvenc($_GET["kedvenc"]);
+    $honnan="ujkedvenc";
+    $kep_tomb=array($_GET["kedvenc"]);
+    echo "<p class='center'>Ezt a képet hozzáadtad a kedvencekhez.</p>";
+}
+else {
+    $honnan="galeria";
+    $kep_tomb=scandir(MANDALAK);
+    unset($kep_tomb[0],$kep_tomb[1]); 
+}
+include("kepek.php");
 ?>
-
-
-
+<p>
+	<a href='https://gencraft.com/' target='_blank'>Gencraft AI</a> által generált képek
+</p>

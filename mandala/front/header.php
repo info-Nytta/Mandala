@@ -13,13 +13,13 @@
 <body id="pagetop">
 
 	<header>
-		<img src='./front/img/banner.jpg' style='height:200px;width:100%;object-fit:cover;'>
+		<img src='./front/img/banner.jpg' style='height:200px;width:100%;object-fit:cover'>
 	</header>
 
     <nav class="fomenu">
 			<div id="hambi" onclick="hambimenu()">&#9776;</div>
 			<ul id="menulista">
-				<li class='menupont'><a href='./?p=0'>Feladat</a></li>
+				<li class='menupont'><a href='https://info.nytta.hu/web/mintak/mandala/?p=0' target="_blank">Feladat</a></li>
 				<li class='menupont'><a href='./'>Mandala</a></li>
 				<li class='menupont'><a href='./?p=1'>Galéria</a></li>
 				<li class='menupont'><a href='./?p=2'>Kedvencek</a></li>

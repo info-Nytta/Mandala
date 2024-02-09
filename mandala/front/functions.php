@@ -1,8 +1,12 @@
 <?php
 function getApi($url) {
 	$json=file_get_contents($url);
-	if (http_response_code()==404) return false;
-	else return json_decode($json,true);
+	switch (http_response_code()) {
+		case 200: {return json_decode($json,true); break;}
+		case 204: {return array(); break;}
+		case 404: {return false; break;}
+	}
 }
+
 ?>
 

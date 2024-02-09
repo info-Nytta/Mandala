@@ -1,6 +1,7 @@
 <?php
 $page="pages/start.php";
 
+
 if (isset($_GET['p'])){
 	switch ($_GET['p']) {
 		case '1': {
@@ -9,10 +10,6 @@ if (isset($_GET['p'])){
 		}
 		case '2': {
 			$page="pages/kedvencek.php";
-			break;
-		}
-		case '0': {
-			$page="pages/feladat.php";
 			break;
 		}
 	}

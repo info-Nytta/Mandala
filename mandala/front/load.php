@@ -1,7 +1,6 @@
 <?php
-// globális konstansok
-		define('MANDALA_MAPPA',"./front/img/mandala/");
-
+// konstans
+define("MANDALAK","./front/img/mandala/");
 
 // menükezelés
 	include_once("menu.php");
